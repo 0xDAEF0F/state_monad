@@ -1,6 +1,6 @@
 {-# LANGUAGE TupleSections #-}
 
-module StateM where
+module State (State (..), put, get) where
 
 newtype State s a = State {runState :: s -> (a, s)}
 
